@@ -1,23 +1,17 @@
 <template>
-  <div id="app">
-    <router-link to="/"><Header head="TOP"/></router-link>
-    <Title title="おすすめYoutuber"/>
-    <ChannelList />
-  </div>
-  <router-view></router-view>
+    <div id="app">
+        <router-link to="/"><Header head="TOP"/></router-link>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-import ChannelList from './components/ChannelList.vue'
 import Header from './components/Header.vue'
-import Title from './components/Title.vue'
 
 export default {
-  name: 'App',
-  components: {
-    ChannelList,
-    Header,
-    Title
-  }
+    name: 'App',
+    components: {
+        Header
+    }
 }
 </script>
