@@ -1,18 +1,18 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import App from './App';
-import Detail from './components/Detail';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import ChannelList from './components/ChannelList'
+import Detail from './components/Detail'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: App },
-    { path: '/detail', component: Detail }
-];
+    { path: '/', name: 'index', component: ChannelList },
+    { path: '/detail/:channel_id', name: 'detail', component: Detail }
+]
 
 const router = new VueRouter({
     routes,
     mode: 'history'
-});
+})
 
-export default router;
+export default router
