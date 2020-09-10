@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>
-            <a v-bind:href="'https://www.youtube.com/channel/' + channel_id">
+            <a v-bind:href="'https://www.youtube.com/channel/'+channel_id" target="_blank">
                 {{channel_nm}}
             </a>
         </h1>
