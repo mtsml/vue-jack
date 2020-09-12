@@ -3,7 +3,7 @@
         <Title title="おすすめYoutuber"/>
         <ul v-for="channel of channels" v-bind:key="channel.channel_id">
             <li>
-                <router-link :to="{name: 'detail', params: {channel_id: channel.channel_id}}">
+                <router-link :to="{name: 'channel', params: {channel_id: channel.channel_id}}">
                     {{channel.channel_nm}}
                 </router-link>
             </li>

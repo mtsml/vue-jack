@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: 'Detail',
+    name: 'Channel',
     data: function() {
         const channel_id = this.$route.params.channel_id
         const channels = [
