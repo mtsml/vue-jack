@@ -19,6 +19,7 @@ export default {
     components: {
         Title
     },
+    // Mock APIができれば書き換える
     data: () => ({
         channels: [
             { channel_id: 'UCutJqz56653xV2wwSvut_hQ', channel_nm: '東海オンエア' },
