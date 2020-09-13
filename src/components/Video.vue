@@ -9,21 +9,19 @@
 </template>
 
 <script>
+import client from '../api/api'
+
 export default {
     name: 'Video',
-    // Mock APIができれば書き換える
-    data: function() {
+    data: () => ({
+        video_id: null,
+        video_nm: null
+    }),
+    mounted() {
         const video_id = this.$route.params.video_id
-        const videos = [
-            { channel_id: 'UCutJqz56653xV2wwSvut_hQ', video_id: 'mP6WW_BHsaA', video_nm: '全く料理できない男が想像だけで『ラタトゥイユ』作ってみた' },
-            { channel_id: 'UCutJqz56653xV2wwSvut_hQ', video_id: 'DWk2OTs9dCI', video_nm: '【検証】石を１万回蹴ったらどうなるのか？' },
-            { channel_id: 'UCynIYcsBwTrwBIecconPN2A', video_id: 'vEJn_euAwQ8', video_nm: '【一旦】りょうくん？大丈夫だよね？' }
-        ]
-        const video_nm = videos.find(video => video.video_id === video_id).video_nm
-        return {
-            video_id,
-            video_nm
-        }
+        client.getVideoInfo(video_id)
+            .then(response => this.video_nm = response.data.video_nm)
+            .catch(error => alert(error))
     }
 }
 </script>
