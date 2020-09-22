@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">
+    <mdb-container>
         <h1>
             <a v-bind:href="'https://www.youtube.com/channel/'+channel_id" target="_blank">
                 {{channel_nm}}
@@ -12,14 +12,18 @@
                 </router-link>
             </li>
         </ul>
-    </div>
+    </mdb-container>
 </template>
 
 <script>
+import { mdbContainer } from 'mdbvue';
 import client from '../api/api'
 
 export default {
     name: 'Channel',
+    components: {
+        mdbContainer
+    },
     data: () => ({
         channel_id: null,
         channel_nm: null,
