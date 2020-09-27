@@ -19,7 +19,7 @@ import client from '../api/api'
 import Title from './Title.vue'
 
 export default {
-    name: 'ChannelList',
+    name: 'Index',
     components: {
         Title,
         mdbContainer
