@@ -1,18 +1,25 @@
 <template>
-    <div class="hello">
-        <h1>
-            <a v-bind:href="'https://www.youtube.com/video/'+video_id" target="_blank">
-                {{video_nm}}
+    <div class="mt-2">
+        <h2 class="mt-4 mb-3">
+            <a class="text-reset" v-bind:href="'https://www.youtube.com/video/'+video_id" target="_blank">
+                {{ video_nm }} 
+                <i class="fas fa-external-link-alt fa-xs"></i>
             </a>
-        </h1>
+        </h2>
         <mdb-container>            
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe 
-                    class="embed-responsive-item" 
-                    v-bind:src="'https://www.youtube.com/embed/'+video_id" 
-                    allowfullscreen
-                >
-                </iframe>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe 
+                            class="embed-responsive-item" 
+                            v-bind:src="'https://www.youtube.com/embed/'+video_id" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </mdb-container>
     </div>
