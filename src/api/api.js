@@ -23,12 +23,6 @@ export default {
     getChannelInfo: (params) => {
         return client.get(`/channel/${params}`)
     },
-    getNewVideos: (params) => {
-        return client.get(`/video/new/${params}`)
-    },
-    getPopularVideos: (params) => {
-        return client.get(`/video/popular/${params}`)
-    },
     getVideoInfo: (params) => {
         return client.get(`/video/${params}`)
     },

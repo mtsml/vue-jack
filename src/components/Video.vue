@@ -8,7 +8,7 @@
         </h2>
         <mdb-container>            
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 pl-0">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe 
                             class="embed-responsive-item" 

@@ -14,6 +14,13 @@
                 </strong>
             </a>
         </div>
+        <form class="search-form d-none d-md-flex ml-3 my-2" method="POST">
+            <input hidden />
+            <input placeholder="検索ワード" />
+            <button class="search-btn btn btn-sm px-3 my-0 btn-light z-depth-0" name='search' type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>    
         <div id="sidebarMenu" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-3 mr-auto" v-for="channel of channel_list" v-bind:key="channel.channel_id">
                 <li class="nav-item">
