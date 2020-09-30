@@ -50,5 +50,10 @@ export default {
             const video_nm = videos.find(video => video.video_id===video_id).video_nm
             return [200, { video_nm }]
         })
+
+        mock.onPost('/video/comment').reply(config => {
+            const comment = config.data
+            return [200, { comment_list: [comment] }]
+        })
     }
 }

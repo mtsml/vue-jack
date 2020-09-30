@@ -31,5 +31,8 @@ export default {
     },
     getVideoInfo: (params) => {
         return client.get(`/video/${params}`)
+    },
+    addVideoComment: (params) => {
+        return client.post(`/video/comment`, params)
     }
 }
