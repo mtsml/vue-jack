@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <router-link to="/"><Header head="Vue Jack"/></router-link>
+        <Header head="Vue Jack"/>
         <router-view></router-view>
     </div>
 </template>
